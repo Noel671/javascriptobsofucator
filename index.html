@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript-Obfuscator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="app__header">
+        <h1>JavaScript-Obfuscator</h1>
+        <p>Verwandle lesbaren Code in schwer lesbaren JavaScript-Code.</p>
+      </header>
+
+      <section class="app__panel">
+        <label for="inputCode">Eingabe (JavaScript)</label>
+        <textarea
+          id="inputCode"
+          placeholder="Füge hier deinen JavaScript-Code ein..."
+          spellcheck="false"
+        ></textarea>
+        <div class="app__actions">
+          <label class="toggle">
+            <input type="checkbox" id="renameVariables" />
+            Variablen umbenennen
+          </label>
+          <label class="toggle">
+            <input type="checkbox" id="encodeStrings" checked />
+            Strings kodieren (Base64)
+          </label>
+          <button id="obfuscateButton" class="primary">Obfuskieren</button>
+          <button id="copyButton">Kopieren</button>
+          <button id="clearButton" class="ghost">Leeren</button>
+        </div>
+      </section>
+
+      <section class="app__panel">
+        <label for="outputCode">Ausgabe</label>
+        <textarea
+          id="outputCode"
+          placeholder="Obfuskierter Code erscheint hier..."
+          spellcheck="false"
+          readonly
+        ></textarea>
+        <p class="hint">
+          Hinweis: Die Obfuskierung ist einfach gehalten und dient zu Lernzwecken.
+        </p>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
